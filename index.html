@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> HỒ CÁ VUI NHỘN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  
+</head>
+<body>
+  <div id="aquarium">
+    <img src="./shark.png" class="fish" style="top: 100px; left: 200px; width: 100px; height: 100px;">
+    <img src="./diver1.png" class="tho" style="top: 200px; left: 400px;width: 100px; height: 100px;">
+    <img src="./turtle.png" class="rua" style="top: 300px; left: 400px;width: 100px; height: 100px;">
+    <img src="./faintSchool.png" class="bb" style="top: 200px; left: 100px;width: 100px; height: 100px;">
+    <img src="./faintSchool.png" class="bb1" style="top: 200px; left: 0px;width: 100px; height: 100px;">
+    <img src="./faintSchool.png" class="bb1" style="top: 200px; left: 200px;width: 100px; height: 100px;">
+    <img src="./faintSchool.png" class="bb1" style="top: 200px; left: 300px;width: 100px; height: 100px;">
+    <img src="./faintSchool.png" class="bb1" style="top: 200px; left: 400px;width: 100px; height: 100px;">
+    
+  </div>
+  <div class="box">
+  <button onclick="changeBackground1()">Thay đổi hình nền1</button>
+  <button onclick="changeBackground2()">Thay đổi hình nền2</button>
+
+  <audio id="myaudio" src="./nhac.mp3" loop></audio>
+  <button id="nhac" onclick="nhac()">Bật/Tắt Nhạc</button>
+  </div>
+
+
+
+  <script>
+    var audio = document.getElementById("myaudio");
+
+    function nhac() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+    var nen = false;
+
+  function changeBackground1() {
+    var aquarium = document.getElementById("aquarium");
+
+    if (nen) {
+      aquarium.style.background = "";
+    } else {
+      aquarium.style.background = "url('./nen2.jpg') center/cover fixed";
+    }
+
+    nen = !nen;
+  }
+
+  function changeBackground2() {
+    var aquarium = document.getElementById("aquarium");
+
+    if (nen) {
+      aquarium.style.background = "";
+    } else {
+      aquarium.style.background = "url('./nen3.jpg') center/cover fixed";
+    }
+
+    nen = !nen;
+  }
+
+  </script>
+</body>
+</html>
